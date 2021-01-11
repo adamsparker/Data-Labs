@@ -11,7 +11,6 @@ auth.onAuthStateChanged(user => {
     }
    else {
        setupUI();
-       setupGuides([]);
        console.log('user logged out');
    }
 });
