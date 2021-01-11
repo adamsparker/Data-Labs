@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Data Labs</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="images/logo.png">
+    <link rel="stylesheet" href="ws_styles.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Year', 'Cases', 'Deats'],
+          ['x',  0,      0],
+          ['x',  2,      0],
+          ['2019',  100,       90],
+          ['2020',  2030,      900]
+        ]);
+
+        var options = {
+          title: 'Company Performance',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+
+</head>
+
+<body>
+    <!--//////////Preloader//////////-->
+    <!--<div id="loader-wrapper">
+          <div class="loader__logo">!
+           <img src="images/logo.png" alt="">
+          </div>-->
+    </div>
+    <div id="page-content">
+        <!--//////////Header//////////-->
+        <div id="blur">
+            <header class="header">
+                <div class="container">
+                    <div class="header__inner">
+                        <div class="header__logo">
+                            <img src="images/logo.png" alt="">
+                        </div>
+                        <nav class="nav">
+                            <div class="account-details">Hello!<br>CovidInfo</div>
+                            <a href="index.html" class="nav__link">home</a>  
+                            <a href="#" class="nav__link btn--navout" id="logout">log out</a>
+                            <a href="#" onclick="toggle__offcreate()" class="nav__link btn--navlink" id="block__create">create block</a>
+                            <a href="#" class="nav__link lang--switcher">RU</a>
+                        </nav>
+                    </div>
+                </div>
+            </header>
+            <!--//////////Intro//////////-->
+            <div class="title__container">
+                <div class="block__title">
+                   <div class="block__title__input"contenteditable="true">Coronavirus data 🔬</div>
+                 </div>
+            </div>
+            <div class="content__container">    
+                <div class="block big-block c1">
+                    <a href="#" onclick="toggle__offmodal()" class="options__button">•••</a>
+                   <div class="option__text">
+                    <h2 class="options__title">Confirmed cases</h2>
+                    <p>The coronavirus COVID-19 is affecting 218 countries and territories around the world and 2 international conveyances. The day is reset after midnight GMT+0. The list of countries and territories and their continental regional classification is based on the United Nations Geoscheme. </p>
+                        <div class="options__date">18.12.2020</div>
+                    </div>
+                    </div>
+                    <div class="block c2">
+                        <a href="#" onclick="toggle__offmodal2()" class="options__button">•••</a>
+                       <div class="option__text">
+                        <h2 class="options__title">Usefull links</h2>
+                        <p>Some information</p>
+                            <div class="options__date">18.12.2020</div>
+                    </div>
+                    </div>
+                    <div class="block c5">
+                        <a href="#" onclick="deleteDoc()" class="options__button">•••</a>
+                       <div class="option__text">
+                        <h2 class="options__title">To Do</h2>
+                        <p>Thing i need to complete until the end of the year</p>
+                            <div class="options__date">20.12.2020</div>
+                    </div>
+                    </div>
+                    <div class="block">
+                        <a href="#" onclick="deleteDoc()" class="options__button">•••</a>
+                       <div class="option__text">
+                        <h2 class="options__title">REMEMBER TO REPORT 31.12.2020!</h2>
+                        <p>Some information</p>
+                            <div class="options__date">21.12.2020</div>
+                    </div>
+                    </div>
+                    <div class="block big-block c7">
+                        <a href="#"onclick="toggle__offmodal3()" class="options__button">•••</a>
+                       <div class="option__text">
+                        <h2 class="options__title">Tables</h2>
+                        <p>The virus that causes COVID-19 is mainly transmitted through droplets generated when an infected person coughs, sneezes, or exhales. These droplets are too heavy to hang in the air, and quickly fall on floors or surfaces.</p>
+                            <div class="options__date">18.12.2020</div>
+                        </div>
+                        </div>
+                        <div class="block big-block c1">
+                            <a href="#" onclick="deleteDoc()" class="options__button">•••</a>
+                           <div class="option__text">
+                            <h2 class="options__title">Research team</h2>
+                            <p>While academic research on teams and teamwork has grown consistently and has shown a sharp increase over the past recent 40 years, the societal diffusion of teams and teamwork actually followed a volatile trend in the 20th century.</p>
+                                <div class="options__date">22.12.2020</div>
+                            </div>
+                            </div>
+                            <div class="block c3">
+                                <a href="#"  class="options__button">•••</a>
+                               <div class="option__text">
+                                <h2 class="options__title">Charts</h2>
+                                <p>Some information</p>
+                                    <div class="options__date">22.12.2020</div>
+                            </div>  
+            </div>
+            </div>
+        </div>
+        <!--//////////Forms and Modals//////////-->
+        <div id="signin">
+            <a href="#" onclick="toggle_signin()" class="signin__link">x</a>
+            <h1 class="form_header main--header">Welcome</h1>
+            <p class="form__header">Email</p>
+            <form id="signin-form">
+                <input class="form__input" id="signin-email" type="text" name="" placeholder="Enter email">
+                <p class="form__header">Password</p>
+                <input class="form__input" id="signin-password" type="password" name="" placeholder="Enter password">
+                <input onclick="toggle_signin()" class="form__input_submit" type="submit" name="" value="Sign in">
+                <a href="" class="sneaky"></a>
+                <p class="form__subheader">Don't have an account? <a class="form__link" onclick="toggle_sign_upin()"
+                href="#" class="signup__link">Sign up</a></p>
+            </form>
+        </div>
+        <div id="signup">
+            <a href="#" onclick="toggle__offall()" class="signup__link">x</a>
+            <h1 class="form_header main--header">New here?</h1>
+            <form id="signup-form">
+                <p class="form__header">Username</p>
+                <input class="form__input" id="signup-username" type="text" name="" placeholder="Enter username">
+                <p class="form__header">Email</p>
+                <input class="form__input" id="signup-email" type="text" name="" placeholder="Enter email">
+                <p class="form__header">Password</p>
+                <input class="form__input" id="signup-password" type="password" name="" placeholder="Enter password">
+                <input onclick="toggle__offall()" class="form__input_submit" type="submit" name="" value="Sign up">
+                <p class="form__subheader">Already have an account? <a class="form__link" onclick="toggle_sign_upin()"
+                href="#" class="signup__link">Sign in</a></p>
+            </form>
+        </div>
+  <div id="modal__article">
+            <p>Stats</p>
+            <div id="curve_chart" style="width: 700px; height: 400px; pointer-events: none; margin-top: 40px;" ></div>
+            <a href="#" onclick="toggle__offmodal()" class="signin__link">x</a>
+            
+            <p style="margin-top: 20px;">Never gonna give you up
+                Never gonna let you down
+                Never gonna run around and desert you
+                Never gonna make you cry
+                Never gonna say goodbye
+                Never gonna tell a lie and hurt you</p>
+        </div>
+        <div id="modal__article2">
+            <a href="#" onclick="toggle__offmodal2()" class="signin__link">x</a>
+            <p style="margin-bottom: 20px;">SOME LINKS</p>
+            <p>https://www.youtube.com/watch?v=dQw4w9WgXcQ</p>
+            <p style="margin: 20px 0;">Medical</p>
+            <p>https://www.youtube.com/watch?v=dQw4w9WgXcQ</p>
+            <p>https://www.youtube.com/watch?v=dQw4w9WgXcQ</p>
+            <p>https://www.youtube.com/watch?v=dQw4w9WgXcQ</p>
+            <p>https://www.youtube.com/watch?v=dQw4w9WgXcQ</p>
+            <p style="margin: 20px 0;">Work</p>
+            <p>https://www.youtube.com/watch?v=dQw4w9WgXcQ</p>
+            <p>https://www.youtube.com/watch?v=dQw4w9WgXcQ</p>
+            <p>https://www.youtube.com/watch?v=dQw4w9WgXcQ</p>
+            <p>https://www.youtube.com/watch?v=dQw4w9WgXcQ</p>
+
+        </div>
+        <div id="modal__article3">
+            <a href="#" onclick="toggle__offmodal3()" class="signin__link">x</a>
+            <h2 style="font-size: 30px; margin-bottom: 20px;">Covid</h2>
+            <p>The human coronavirus was first diagnosed in 1965 by Tyrrell and Bynoe from the respiratory tract sample of an adult with a common cold cultured on human embryonic trachea.1 Naming the virus is based on its crown-like appearance on its surface.2 Coronaviruses (CoVs) are a large family of viruses belonging to the Nidovirales order, which includes Coronaviridae, Arteriviridae, and Roniviridae families.3 Coronavirus contains an RNA genome and belongs to the Coronaviridae family.4 This virus is further subdivided into four groups, ie, the α, β, γ, and δ coronaviruses.5 α- and β-coronavirus can infect mammals, while γ- and δ- coronavirus tend to infect birds.6 Coronavirus in humans causes a range of disorders, from mild respiratory tract infections, such as the common cold to lethal infections, such as the severe acute respiratory syndrome (SARS), Middle East respiratory syndrome (MERS) and Coronavirus disease 2019 (COVID-19). The coronavirus first appeared in the form of severe acute respiratory syndrome coronavirus (SARS-CoV) in Guangdong province, China, in 20027 followed by Middle East respiratory syndrome coronavirus (MERS-CoV) isolated from the sputum of a 60-year-old man who presented symptoms of acute pneumonia and subsequent renal failure in Saudi Arabia in 2012.8 In December 2019, a β-coronavirus was discovered in Wuhan, China. The World Health Organization (WHO) has named the new disease as Coronavirus disease 2019 (COVID-19), and Coronavirus Study Group (CSG) of the International Committee has named it as SARS-CoV-2.9,10 Based on the results of sequencing and evolutionary analysis of the viral genome, bats appear to be responsible for transmitting the virus to humansThe human coronavirus was first diagnosed in 1965 by Tyrrell and Bynoe from the respiratory tract sample of an adult with a common cold cultured on human embryonic trachea.1 Naming the virus is based on its crown-like appearance on its surface.2 Coronaviruses (CoVs) are a large family of viruses belonging to the Nidovirales order, which includes Coronaviridae, Arteriviridae, and Roniviridae families.3 Coronavirus contains an RNA genome and belongs to the Coronaviridae family.4 This virus is further subdivided into four groups, ie, the α, β, γ, and δ coronaviruses.5 α- and β-coronavirus can infect mammals, while γ- and δ- coronavirus tend to infect birds.6 Coronavirus in humans causes a range of disorders, from mild respiratory tract infections, such as the common cold to lethal infections, such as the severe acute respiratory syndrome (SARS), Middle East respiratory syndrome (MERS) and Coronavirus disease 2019 (COVID-19). The coronavirus first appeared in the form of severe acute respiratory syndrome coronavirus (SARS-CoV) in Guangdong province, China, in 20027 followed by Middle East respiratory syndrome coronavirus (MERS-CoV) isolated from the sputum of a 60-year-old man who presented symptoms of acute pneumonia and subsequent renal failure in Saudi Arabia in 2012.8 In December 2019, a β-coronavirus was discovered in Wuhan, China. The World Health Organization (WHO) has named the new disease as Coronavirus disease 2019 (COVID-19), and Coronavirus Study Group (CSG) of the International Committee has named it as SARS-CoV-2.9,10 Based on the results of sequencing and evolutionary analysis of the viral genome, bats appear to be responsible for transmitting the virus to humansThe human coronavirus was first diagnosed in 1965 by Tyrrell and Bynoe from the respiratory tract sample of an adult with a common cold cultured on human embryonic trachea.1 Naming the virus is based on its crown-like appearance on its surface.2 Coronaviruses (CoVs) are a large family of viruses belonging to the Nidovirales order, which includes Coronaviridae, Arteriviridae, and Roniviridae families.3 Coronavirus contains an RNA genome and belongs to the Coronaviridae family.4 This virus is further subdivided into four groups, ie, the α, β, γ, and δ coronaviruses.5 α- and β-coronavirus can infect mammals, while γ- and δ- coronavirus tend to infect birds.6 Coronavirus in humans causes a range of disorders, from mild respiratory tract infections, such as the common cold to lethal infections, such as the severe acute respiratory syndrome (SARS), Middle East respiratory syndrome (MERS) and Coronavirus disease 2019 (COVID-19). The coronavirus first appeared in the form of severe acute respiratory syndrome coronavirus (SARS-CoV) in Guangdong province, China, in 20027 followed by Middle East respiratory syndrome coronavirus (MERS-CoV) isolated from the sputum of a 60-year-old man who presented symptoms of acute pneumonia and subsequent renal failure in Saudi Arabia in 2012.8 In December 2019, a β-coronavirus was discovered in Wuhan, China. The World Health Organization (WHO) has named the new disease as Coronavirus disease 2019 (COVID-19), and Coronavirus Study Group (CSG) of the International Committee has named it as SARS-CoV-2.9,10 Based on the results of sequencing and evolutionary analysis of the viral genome, bats appear to be responsible for transmitting the virus to humans</p>
+        </div>
+        <div id="create__block">
+            <a href="#" onclick="toggle__offcreate()" class="signup__link">x</a>
+            <h1 class="form_header main--header">New block</h1>
+            <form id="create__block__form">
+                <input id="block__date" type="text">
+                <p class="form__header">Title</p>
+                <input class="form__input" id="create__block__title" type="text" name="" placeholder="Enter title">
+                <p class="form__header">Content</p>
+                <input class="form__input" id="create__block__content" type="text" name="" placeholder="Enter content">
+                <p class="form__header">Block options</p>
+                <select class="form__select" name="form__colors" id="colors">
+                    <option class="form__select__option" id="create__block__color" value="c1">Green</option>
+                    <option class="form__select__option" id="create__block__color" value="c2">Red</option>
+                    <option class="form__select__option" id="create__block__color" value="c3">Yellow</option>
+                    <option class="form__select__option" id="create__block__color" value="c4">Pink</option>
+                    <option class="form__select__option" id="create__block__color" value="c5">Purple</option>
+                    <option class="form__select__option" id="create__block__color" value="">White</option>
+                  </select>
+                <select class="form__select" name="form__size" id="size">
+                    <option class="form__select__option" id="create__block__size" value="">Small</option>
+                    <option class="form__select__option" id="create__block__size" value="big-block">Big</option>
+                  </select>
+                  <input name="myFile" type="file">
+              <!-- <input href="#" value="c1" class="colorswitch">⚫</input>--> 
+                <input onclick="toggle__offcreate()" class="form__input_submit" type="submit" name="" value="Create">
+            </form>
+        </div>
+      
+
+        <script>
+            let today = new Date().toISOString().slice(0, 10)
+            document.getElementById("block__date").value = today;
+
+            function toggle_signin() {
+                var blur = document.getElementById('blur');
+                blur.classList.toggle('active');
+                var popup = document.getElementById('signin');
+                popup.classList.toggle('active');
+            }
+            function toggle_signup() {
+                var blur = document.getElementById('blur');
+                blur.classList.toggle('active');
+                var popup1 = document.getElementById('signup');
+                popup1.classList.toggle('active');
+            }
+            function toggle_sign_upin() {
+                var popup = document.getElementById('signin');
+                popup.classList.toggle('active');
+                var popup1 = document.getElementById('signup');
+                popup1.classList.toggle('active');
+                document.getElementById('signup-email').value = '';
+                document.getElementById('signup-password').value = '';
+            }
+            function toggle__offall() {
+                var blur = document.getElementById('blur');
+                blur.classList.toggle('active');
+                var popup1 = document.getElementById('signup');
+                popup1.classList.toggle('active');
+            }
+            function toggle__offmodal() {
+                var blur = document.getElementById('blur');
+                blur.classList.toggle('active');
+                var modal_article = document.getElementById('modal__article');
+                modal_article.classList.toggle('active');
+            }
+            function toggle__offmodal2() {
+                var blur = document.getElementById('blur');
+                blur.classList.toggle('active');
+                var modal_article = document.getElementById('modal__article2');
+                modal_article.classList.toggle('active');
+            }
+            function toggle__offmodal3() {
+                var blur = document.getElementById('blur');
+                blur.classList.toggle('active');
+                var modal_article = document.getElementById('modal__article3');
+                modal_article.classList.toggle('active');
+            }
+            function toggle__offcreate() {
+                var blur = document.getElementById('blur');
+                blur.classList.toggle('active');
+                var modal_create = document.getElementById('create__block');
+                modal_create.classList.toggle('active');
+            }
+            function toggle__offsupport() {
+                var blur = document.getElementById('blur');
+                blur.classList.toggle('active');
+                var modal_article = document.getElementById('modal__support');
+                modal_article.classList.toggle('active');
+            }
+            function toggle__offabout() {
+                var blur = document.getElementById('blur');
+                blur.classList.toggle('active');
+                var modal_article1 = document.getElementById('modal__about');
+                modal_article1.classList.toggle('active');
+            }
+
+    /*         window.onload = function loadLoader() {
+                setTimeout(
+                    function () {
+                        document.getElementById('loader-wrapper').style.opacity = '0';
+                    }, 5000
+                );
+                setTimeout(
+                    function () {
+                        document.getElementById('loader-wrapper').style.display = 'none';
+                    }, 6000
+                );
+            }
+    */
+
+/////////////////////////////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////////////////////////////
+
+        </script>
+    
+        <!--//////////FireBase//////////-->
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+
+        <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
+
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries --> 
+        <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-analytics.js"></script>
+
+        <script>
+            // Your web app's Firebase configuration
+            // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+            var firebaseConfig = {
+                apiKey: "AIzaSyADe_yY_Ne9PvX57nmmBR3g4rwGBNedhIo",
+                authDomain: "data-labs-9e443.firebaseapp.com",
+                databaseURL: "https://data-labs-9e443.firebaseio.com",
+                projectId: "data-labs-9e443",
+                storageBucket: "data-labs-9e443.appspot.com",
+                messagingSenderId: "865927736252",
+                appId: "1:865927736252:web:643e83937cc41002bd19b9",
+                measurementId: "G-ZWJY58S0WB"
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+
+            // Make auth and firestore reference
+            const auth = firebase.auth();
+            const db = firebase.firestore();
+
+            // Update firestore settings
+            db.settings({ timestampsInSnapshots: true });
+            firebase.analytics();
+        </script>
+        <!-- Third party Java-->
+       
+</body>
+</html>
