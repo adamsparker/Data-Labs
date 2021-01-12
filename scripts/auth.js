@@ -1,37 +1,17 @@
 // listen for auth status changes
 auth.onAuthStateChanged(user => {
    if (user) {
-
-    db.collection('blocks').onSnapshot(snapshot => {
-        setupGuides(snapshot.docs);
-    })
+       
     console.log('user logged in: ', user);
     setupUI(user);
     
     }
    else {
        setupUI();
-       setupGuides([]);
        console.log('user logged out');
    }
 });
 
-
-
-
-// create new block
-const createBlock = document.querySelector('#create__block__form');
-createBlock.addEventListener('submit', (e) => {
-    e.preventDefault();
-    
-    db.collection('blocks').add({
-        title: createBlock['create__block__title'].value,
-        content: createBlock['create__block__content'].value,
-        color: createBlock['colors'].value,
-        size: createBlock['size'].value,
-        date: createBlock['block__date'].value
-       })
-    }) 
 // signup
 const signupForm = document.querySelector('#signup-form');
 signupForm.addEventListener('submit', (e) => {
