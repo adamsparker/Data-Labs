@@ -32,6 +32,7 @@ body {
     background-size: cover;
     -webkit-font-smoothing: antialiased;
     -ms-overflow-style: none;
+    min-width: 340px;
     
     
 }
@@ -669,13 +670,16 @@ body.loading {
     
     @media (max-width: 450px) {
         
+        .nav__link {
+            margin-left: 0;
+        }
+
         .nav {
             flex-direction: column;
             
         }
         
         .nav__link {
-            margin: 0px 9px;
             text-align: center;
             
         }
@@ -697,8 +701,9 @@ body.loading {
             
         }
         
-        
-        
+        .nav__link:nth-child(3) {
+            margin-left: 0;
+        }    
         .btn--nav {
             opacity: 0;
             margin: 0;
@@ -709,6 +714,7 @@ body.loading {
     
     @media (max-width: 1230px) {
         
+
         .footer__third{
             padding: 0 0;
         }
@@ -766,6 +772,8 @@ body.loading {
     
     @media (max-width: 375px) {
         
+      
+
         #signup {
             height: 100%;
             padding: 40px;
