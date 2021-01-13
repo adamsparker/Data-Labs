@@ -146,7 +146,7 @@ body.loading {
 
 .card--1 {
     
-    background: url(/images/img1.jpg);
+    background: url(./images/img1.jpg);
     background-repeat: no-repeat;
     background-size: 318%;
     padding: 21% 50px; 
