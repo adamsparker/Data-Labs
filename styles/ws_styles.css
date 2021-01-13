@@ -171,6 +171,7 @@ body.loading {
 /*//////////Output//////////*/
 
 .account-details {
+    font-size: 14px;
     color: white;
     opacity: 0.6;
 }
