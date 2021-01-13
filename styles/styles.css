@@ -12,7 +12,7 @@
 */
 
 
-@font-face { font-family: VisueltPro; src: url('assets/fonts/VisueltPro.ttf'); } 
+@font-face { font-family: VisueltPro; src: url('/assets/fonts/VisueltPro.ttf'); } 
 
 h1, h2, h3, h4, h5, h6 {
     margin: 0;
@@ -146,7 +146,7 @@ body.loading {
 
 .card--1 {
     
-    background: url(images/img1.jpg);
+    background: url(/images/img1.jpg);
     background-repeat: no-repeat;
     background-size: 318%;
     padding: 21% 50px; 
@@ -179,7 +179,7 @@ body.loading {
     
     .card--2 {
         
-        background: url(images/img2.jpg);
+        background: url(/images/img2.jpg);
         background-repeat: no-repeat;
         background-size: 330%;
         padding: 22% 50px; 
@@ -194,7 +194,7 @@ body.loading {
     }
     
     .card--3 {
-        background: url(images/img3.jpg);
+        background: url(/images/img3.jpg);
         background-repeat: no-repeat;   
         background-size: 330%;
         padding: 22% 50px; 
