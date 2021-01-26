@@ -3,7 +3,7 @@
 *::after {
     box-sizing: border-box;
 }
-/* problem Finder
+/* Problem Finder
 * {
     background: #000 !important;
     color: #0f0 !important;
@@ -106,7 +106,7 @@ body.loading {
 /*////////Navigation////////*/
 
 .nav {
-    display: flex;
+    display: flex;  
     text-transform: uppercase;
     flex-wrap: wrap;
 }
@@ -122,12 +122,78 @@ body.loading {
     transition: opacity 0.2s linear;
 }
 
-
-
 .nav__link:hover {
     opacity: 1  ;
 }
 
+.nav__burger-menu {
+    display: none;
+}
+
+/*////////Burger Menu////////*/
+
+.burger {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: 100;
+}
+
+.burger__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.burger__link {
+    position: relative;
+    padding-top: 20px;
+    color: #fff;
+    text-decoration: none;
+    opacity: 0.6;
+    transition: opacity 0.2s linear;
+}
+
+.burger__btn--navin {
+        
+    text-decoration: none;
+    color: white;
+    border: 1px solid white;
+    
+    padding: 5px 10px;
+    margin-top: 15px;
+    padding-top: 5px;
+    border-radius: 5px;
+    background-color: none; 
+    transition: background-color 200ms linear;
+}
+
+
+.burger__btn--navout {
+    
+    text-decoration: none;
+    color: white;
+    border: 1px solid white;
+    
+    padding: 5px 10px;
+    margin-top: 15px;
+    padding-top: 5px;
+    border-radius: 5px;
+    background-color: none; 
+    transition: background-color 200ms linear;
+}
+
+.burger__account-details {
+    color: white;
+    opacity: 0.6;
+    font-size: 14px;
+}
 /*////////Cards////////*/
 
 .cards {
@@ -146,7 +212,7 @@ body.loading {
 
 .card--1 {
     
-    background: url(images/img1.JPG);
+    background: url(/images/img1.jpg);
     background-repeat: no-repeat;
     background-size: 318%;
     padding: 21% 50px; 
@@ -195,7 +261,7 @@ body.loading {
     
     .card--3 {
         background: url(/images/img3.jpg);
-        background-repeat: no-repeat;
+        background-repeat: no-repeat;   
         background-size: 330%;
         padding: 22% 50px; 
         transition: background-size 200ms linear;
@@ -646,16 +712,6 @@ body.loading {
             height: 20%;
         }
         
-        .header__logo {
-            padding-bottom: 20px;
-        }
-        
-        .header__inner {
-            flex-wrap: wrap;
-            flex-direction: column;
-            align-items: center;
-        }
-        
         .cards {
             flex-wrap: wrap;
             flex-direction: column;
@@ -668,48 +724,20 @@ body.loading {
         }
     }
     
-    @media (max-width: 450px) {
-        
-        .nav__link {
-            margin-left: 0;
+    @media (max-width: 750px) {
+
+        .burger {
+            display: flex;
         }
 
         .nav {
-            flex-direction: column;
-            
+            display: none;
         }
-        
-        .nav__link {
-            text-align: center;
-            
-        }
-        
-        .btn--navin, .btn--navout {
-            border: 0;
-        }
-        
-        .lang--switcher {
-            padding-top: 0;
-        }
-        
-    }
     
-    @media (max-width: 570px) {
-        
-        .nav__link {
-            font-size: 9px;
-            
+        .nav__burger-menu {
+            display: inline-block;
         }
         
-        .nav__link:nth-child(3) {
-            margin-left: 0;
-        }    
-        .btn--nav {
-            opacity: 0;
-            margin: 0;
-            font-size: 0px;
-            border: 0;
-        }
     }
     
     @media (max-width: 1230px) {
@@ -770,6 +798,7 @@ body.loading {
         }
     }
     
+
     @media (max-width: 375px) {
         
       
