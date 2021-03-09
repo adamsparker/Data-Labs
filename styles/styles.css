@@ -316,9 +316,9 @@ body.loading {
     #modal__article {
         position: absolute;
         left: 50%;
-        transform: translate(-50%, -135%);
+        transform: translate(-50%, -260%);
         width: 700px;
-        height: 750px;
+        height: 350px;
         padding: 40px;
         box-shadow: 0 5px 30px rgba(0,0,0,.30);
         background: black;
@@ -404,6 +404,9 @@ body.loading {
         height: 30%;
     }
     
+    .warning-modal {
+        margin-bottom: 20px;
+    }
     /*////////Forms////////*/
     
     #signin.active {
