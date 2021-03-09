@@ -749,6 +749,9 @@ body.loading {
             
         }
         
+        #modal__article {
+            transform: translate(-50%, -250%);
+
         .cards {
             flex-flow: wrap;
         }
@@ -763,8 +766,7 @@ body.loading {
             padding: 40px;
         }
 
-            #modal__article {
-            transform: translate(-50%, -320%);
+            
         }
         
         .inner__footer .logo__container img{
