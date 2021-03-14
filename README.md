@@ -3,8 +3,8 @@
 <br>
 <br>
 <p align="center">
-- Data Labs is platform for storing analyzing and defending any kind of data <br>
-- Will edit this soon
+- Data Labs devolopment oficially closed
+- we lost
 </p>
 <br>
 <br>
