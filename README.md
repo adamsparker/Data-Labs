@@ -4,7 +4,6 @@
 <br>
 <p align="center">
 - Data Labs devolopment oficially closed
-- we lost
 </p>
 <br>
 <br>
