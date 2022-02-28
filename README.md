@@ -1,5 +1,4 @@
-<h1 align="center">Data Labs</h1>
-https://adamsparker.github.io/Data-Labs/
+<h1 align="center"><a href="https://adamsparker.github.io/Data-Labs/">Data Labs</a></h1>
 <h3 align="center">Store, Analyze, Defend</h3>
 <br>
 <br>
