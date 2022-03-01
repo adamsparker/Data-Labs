@@ -9,12 +9,24 @@ const createLink = document.querySelectorAll('#block__create');
 auth.onAuthStateChanged(user => {
     if (user) {
  
-     db.collection('blocks').onSnapshot(snapshot => {
+     const BlockId = db.collection('blocks').onSnapshot(snapshot => {
          setupGuides(snapshot.docs);
+        
+         const BlockId = db.collection('projects').doc()
+         console.log(BlockId.id)  // prints the unique id
+         BlockId.set({id: BlockId.id})  // sets the contents of the doc using the id
+         .then(() => {  // fetch the doc again and show its data
+             BlockId.get().then(doc => {
+                 console.log(doc.data())  // prints {id: "the unique id"}
+                
+             })
+         })
      })
      console.log('user logged in: ', user);
      setupUI(user);
      
+     
+
      }
     else {
         setupUI();
@@ -80,6 +92,7 @@ const setupUI = (user) => {
             `;
             accountDetails.innerHTML = html;
         })
+        
           //hide account info
           accountDetails.innerHTML = '';
 
