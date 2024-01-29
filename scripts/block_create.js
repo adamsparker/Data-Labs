@@ -61,7 +61,7 @@ const setupGuides = (data) => {
       // ${blocks.color} должно быть в <div class="block big-block">
   
       const blk = `
-                     <div class="block ${blocks.size} ${blocks.color}">
+                     <div  class="block ${blocks.size} ${blocks.color}">
                       <a href="#" onclick="deleteDoc()" class="options__button">•••</a>
                      <div class="option__text">
                       <h2 class="options__title">${blocks.title}</h2>
